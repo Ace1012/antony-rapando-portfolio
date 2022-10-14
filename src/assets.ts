@@ -1,14 +1,14 @@
 export default{
     pictures:{
-        ProfilePicture: 'src/assets/profile-picture.jpeg'
+        ProfilePicture: 'assets/profile-picture.jpeg'
     },
     svgs:{
-        HtmlLogo: 'src/assets/html.svg',
-        GitHubLogo: 'src/assets/github.svg',
-        GitLabLogo: 'src/assets/gitlab.svg',
-        ReactLogo: 'src/assets/react.svg',
-        CSSLogo: 'src/assets/css.svg',
-        JSLogo: 'src/assets/javascript.svg',
-        TSLogo: 'src/assets/typescript.svg'
+        HtmlLogo: 'assets/html.svg',
+        GitHubLogo: 'assets/github.svg',
+        GitLabLogo: 'assets/gitlab.svg',
+        ReactLogo: 'assets/react.svg',
+        CSSLogo: 'assets/css.svg',
+        JSLogo: 'assets/javascript.svg',
+        TSLogo: 'assets/typescript.svg'
     }
 }
