@@ -3,7 +3,6 @@ import Modal from "./modal";
 import { ModalContext } from "./App";
 import { useContext, useEffect, useRef } from "react";
 import assets from "./assets";
-import ProfilePicture from '/assets/profile-picture.jpeg'
 
 const homeVariants = {
   hidden: {
@@ -70,7 +69,7 @@ const Home = () => {
             </p>
           </div>
           <motion.div className="profile-picture">
-            <img src={ProfilePicture} alt="profile picture" />
+            <img src={assets.pictures.ProfilePicture} alt="profile picture" />
           </motion.div>
         </motion.div>
       </motion.section>
