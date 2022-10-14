@@ -6,7 +6,7 @@ const Modal = (props: any) => {
       {isOpen && (
         <form
           className="contact-form"
-          action="https://formsubmit.co/https://ace1012.github.io/antony-rapando-portfolio"
+          action="https://formsubmit.co/d375fdab27e276ae0dcee4b28ea32f8c"
           method="POST"
           onClick={(e) => e.stopPropagation()}
         >
