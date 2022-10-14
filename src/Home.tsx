@@ -56,7 +56,7 @@ const Home = () => {
       animate="visible"
     >
       {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
-      <motion.section ref={sectionOne} id="section-one" className="section one">
+      <motion.section ref={sectionOne} id="section-one #" className="section one">
         <motion.div layout="position" className="summary">
           <div className="summary-content">
             <h3>Hey there 👋🏾😁,</h3>
@@ -109,7 +109,7 @@ const Home = () => {
           <h1>Projects</h1>
         </header>
         <div className="projects-container">
-          <a className="test project1" href="/" title="My portfolio webpage">PORTFOLIO</a>
+          <a className="test project1" href="#" title="My portfolio webpage">PORTFOLIO</a>
           <a className="test project2" href="">Raps Shopping Incoming</a>
           <a className="test project3" href="">Project 3</a>
         </div>
