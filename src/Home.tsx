@@ -109,7 +109,7 @@ const Home = () => {
           <h1>Projects</h1>
         </header>
         <div className="projects-container">
-          <a className="test project1" href="http://127.0.0.1:5173" title="My portfolio webpage">PORTFOLIO</a>
+          <a className="test project1" href="/" title="My portfolio webpage">PORTFOLIO</a>
           <a className="test project2" href="">Raps Shopping Incoming</a>
           <a className="test project3" href="">Project 3</a>
         </div>
