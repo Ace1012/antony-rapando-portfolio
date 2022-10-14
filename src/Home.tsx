@@ -98,7 +98,7 @@ const Home = () => {
             <h1>Version Control</h1>
             <div className="skill-logos">
               <img id="skill" src={assets.svgs.GitHubLogo} alt="GitHub Logo" />
-              <img id="skill" src={assets.svgs.GitLabLogo} alt="GitLab  Logo" />
+              <img id="skill" src={assets.svgs.GitLabLogo} alt="GitLab Logo" />
             </div>
           </li>
         </ul>
@@ -110,8 +110,8 @@ const Home = () => {
         </header>
         <div className="projects-container">
           <a className="test project1" href="#" title="My portfolio webpage">PORTFOLIO</a>
-          <a className="test project2" href="">Raps Shopping Incoming</a>
-          <a className="test project3" href="">Project 3</a>
+          <a className="test project2" href="" title="Coming soon 😉">Raps Shopping Incoming</a>
+          <a className="test project3" href="" title="Coming soon 😉">Project 3</a>
         </div>
       </section>
     </motion.div>
