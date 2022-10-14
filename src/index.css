@@ -691,7 +691,7 @@
   }
 
   .project1{
-    background-image: url("./assets/profile-picture.jpeg");
+    background-image: url("../assets/profile-picture.jpeg");
   }
 
   .test:hover, .test:active{
