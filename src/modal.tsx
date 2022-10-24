@@ -10,20 +10,34 @@ const Modal = (props: any) => {
           method="POST"
           onClick={(e) => e.stopPropagation()}
         >
+          <span id="close-contact-form" onClick={() => setIsOpen(false)}>
+            &times;
+          </span>
           <h1>👋🏾 Contact Me</h1>
-          {/* <button id="close-contact-form" onClick={() => setIsOpen(false)}>Close</button> */}
-          <span id="close-contact-form" onClick={() => setIsOpen(false)}>&times;</span>
-          <label data-section="Name:">
-            <input id="name" type="text" name="name" required />
-          </label>
-          <label data-section="Email:">
-            <input id="email" type="email" name="email" required />
-          </label>
-          <label data-section="Message:">
-            <textarea name="message" id="message" required/>
-          </label>
-          <div className="form-buttons">
-            <button type="submit">Send</button>
+          <div className="form-content">
+            <div className="form-summary">
+              <article>
+                In case you would like to contact me, go ahead and send me an
+                email 😁.
+              </article>
+            </div>
+            <div className="form-input-fields">
+              <label data-section="Name:">
+                Name:
+                <input type="text" name="name" required />
+              </label>
+              <label data-section="Email:">
+                Email:
+                <input type="email" name="email" required />
+              </label>
+              <label data-section="Message:">
+                Message:
+                <textarea name="message" id="message" required />
+              </label>
+              <div className="form-buttons">
+                <button type="submit">Send Message</button>
+              </div>
+            </div>
           </div>
         </form>
       )}

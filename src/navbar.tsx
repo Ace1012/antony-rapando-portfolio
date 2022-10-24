@@ -182,7 +182,7 @@ const NavBar = (props: any) => {
       <ul className="links">
         <li>
           <span>
-            <a className="nav-option" href="#section-two">
+            <a href="#section-two">
               <span className="nav-option">Skills</span>
             </a>
           </span>

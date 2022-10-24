@@ -12,6 +12,8 @@
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
     background-color: #212121;
     user-select: none;
+    padding: 0;
+    margin: 0;
   }
 
   footer{
@@ -22,6 +24,7 @@
     color: black;
     font-weight: bold;
     font-size: 1.2rem;
+    z-index: 999;
   }
 
   .navbar{
@@ -112,20 +115,20 @@
     /* background-color: blue; */
   }
 
-  .links a, span{
+  .links a{
     color: white;
     text-decoration: none;
   }
 
   .links .nav-option{
     color: white;
-    /* font-weight: bolder; */
+    font-weight: 600;
     font-size: 1.2em;
     text-decoration: none;
   }
 
   .links .nav-option:hover,.links .nav-option:active{
-    color: rgb(248,127,92,1);
+    color: rgb(202, 99, 71) !important;
     cursor: pointer;
   }
 
@@ -212,26 +215,23 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    justify-content: space-around;
-    background-color: lightgrey;
-    gap: 0.5em;
-    padding: 3vh 3vw;
+    /* justify-content: space-between; */
+    background-color: rgb(167, 167, 167);
+    /* color: white; */
+    /* gap: 0.5em; */
+    padding: 3rem;
     border: 1px solid white;
-    border-radius: 8px;
-    width: 33vw;
+    border-radius: 15px;
+    width: 50%;
     height: 70%;
     box-sizing: border-box;
   }
-
-  .contact-form *{
-    box-sizing: border-box;
-  }
-
+  
   .contact-form #close-contact-form{
     position: absolute;
-    top: 1vh;
-    right: 1vw;
-    font-size: 2rem;
+    top: 0.5rem;
+    right: 1.5rem;
+    font-size: 3rem;
     color: black;
   }
 
@@ -241,39 +241,77 @@
   }
 
   .contact-form h1{
-    color: black;
+    /* color: black; */
     text-align: center;
-    font-size: 1.5rem;
-    padding: 0;
+    font-size: 3rem;
+    /* background-color: red; */
+  }
+
+  .form-content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: minmax(fit-content, auto);
+    /* gap: 3rem; */
+    /* background-color: red; */
+    justify-items: center;
+    padding: 2rem;
+  }
+
+  .form-content .form-summary{
+    /* opacity: 0.5; */
+    border-radius: 10px;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(139, 139, 139);
+    color: #212121;
+    /* border: 1px solid black; */
+    padding: 1rem;
+    box-sizing: border-box;
+    /* background-position-x: center;
+    background-position-y: center;
+    background-image: url("../public/assets/profile-picture.jpeg"); */
+  }
+
+  .form-input-fields{
+    /* background-color: rebeccapurple; */
+    width: 100%;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    padding: 0 1rem;
+    justify-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .contact-form input{
     border-radius: 8px;
     border: 1px solid black;
-    padding: 1vh 1vw;
+    padding: 1rem;
     font-size: 1.2rem;
     width: 100%;
-    min-height: 30px;
+    box-sizing: border-box;
     align-self: center;
+    color: white;
+    background-color: #444444;
   }
 
   .contact-form textarea{
     resize: none;
     border-radius: 8px;
     border: 1px solid black;
-    padding: 1vh 1vw;
-    font-size: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    align-self: center;
     width: 100%;
+    font-size: 1rem;
+    color: white;
+    background-color: #444444;
   }
 
   .contact-form input:not(.message){
     height: 3vh;
   }
-
-  /* .contact-form [data-section="Message:"] input{
-    height: 20vh;
-    padding: 5px;
-  } */
 
   .contact-form label{
     display: flex;
@@ -281,14 +319,7 @@
     /* margin: 1.5rem; */
     min-width: 80%;
     align-self: center;
-  }
-
-  .contact-form label::before{
-    content: attr(data-section);
-    margin: auto;
-    color: black;
-    font-size: 1rem;
-    width: 100%;
+    margin: 0;
   }
 
   .form-buttons{
@@ -300,10 +331,13 @@
     width: 50%;
     margin: auto;
     border: 1px solid black;
-    border-radius: 8px;
+    border-radius: 20px;
     font-size: 1.2rem;
     padding: 1vh 1vw;
-    box-shadow: 0 0 30px 5px rgb(248,127,92,1);
+    color: white;
+    border: 1px solid white;
+    background-color: rgb(248,127,92,1);
+    /* box-shadow: 0 0 30px 5px rgb(248,127,92,1); */
   }
 
   .contact-form button:hover, button:active{
@@ -324,19 +358,22 @@
     display: flex;
     flex-direction: column;
     margin: auto;
+    padding: 0;
     width: 100%;
   }
 
   .summary{
     width: 80%;
     height: 50vh;
-    /* background-color: red; */
+    background-color: #212121;
     padding: 1em 2em;
     display: flex;
     border-radius: 10px;
     box-shadow: 0 0 1em rgb(80, 79, 79);
     /* border: 1px solid white; */
     color: white;
+    
+    z-index: 999;
   }
 
   .summary-content{
@@ -454,6 +491,7 @@
     /* border: 1px solid white; */
     /* background-color: red; */
     padding: 1em;
+    z-index: 1000;
   }
 
   .profile-picture img{
@@ -477,7 +515,11 @@
 
   .one{
     padding: 3em 0;
-    background-color: transparent;
+    background-color: #212121;
+  }
+
+  .particles{
+    z-index: 900;
   }
 
   @media screen and (max-width:900px){
@@ -567,38 +609,41 @@
   }
 
   .skill-item h1{
-    /* margin: auto 10% auto 0; */
     margin: auto;
     margin-left: 0;
     box-sizing: border-box;
-    /* background-color: red; */
-    /* font-size: 1rem; */
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
   .skill-logos{
-    margin: auto;
-    margin-right: 0;
     display: flex;
-    justify-content: space-around;
-    width: fit-content;
+    justify-content: right;
     box-sizing: border-box;
     /* background-color: red; */
   }
 
   #skill{
-    width: 30px;
+    width: 2rem;
     margin: 0.5rem;
     box-sizing: border-box;
-    /* border: 1px solid black; */
-    background-color: darkgrey;
+    /* border: 1px solid white; */
+    background-color: #444444;
     border-radius: 8px;
     padding: 3px;
     transition: transform ease-in-out 150ms;
   }
 
-  #skill:hover, #skill:active{
+  #spring{
+    margin-left: 0;
+    width: 5rem;
+    background-color: #444444;
+    border-radius: 8px;
+    padding: 0.5rem;
+    transition: transform ease-in-out 150ms;
+  }
+
+  #skill:hover, #skill:active, #spring:hover, #spring:active{
     transform: translateY(-1px);
   }
 
