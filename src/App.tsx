@@ -7,8 +7,8 @@ import NavBar from "./navbar";
 export const ModalContext = React.createContext<any>([]);
 
 const year = new Date().getFullYear();
-const footer = document.getElementById("footer") as HTMLElement;
-footer.innerText = "Antony Rapando - © " + year;
+// const footer = document.getElementById("footer") as HTMLElement;
+// footer.innerText = "Antony Rapando - © " + year;
 
 function App() {
   const [extraMenu, setExtraMenu] = useState(false);

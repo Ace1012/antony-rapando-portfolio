@@ -18,6 +18,8 @@ const homeVariants = {
   },
 };
 
+const year = new Date().getFullYear();
+
 const Home = () => {
   const { isOpen, setIsOpen } = useContext(ModalContext);
 
@@ -41,8 +43,7 @@ const Home = () => {
         svgPaths.forEach((p) => {
           two.isIntersecting
             ? (p.style.fill = "")
-            : // p.style.fill = "rgb(207, 86, 52)",
-              ((p.style.fill = "rgb(207, 86, 52)"), (p.style.stroke = "black"));
+            : ((p.style.fill = "rgb(207, 86, 52)"), (p.style.stroke = "black"));
         });
         navOption.forEach((a) => {
           two.isIntersecting ? (a.style.color = "") : (a.style.color = "black");
@@ -67,7 +68,10 @@ const Home = () => {
       </AnimatePresence>
       <motion.section ref={sectionOne} id="section-one #" className="one">
         <Particles />
-        <motion.div layout="position" className="summary" onLoad={() => console.log("Loaded after particles!")}>
+        <motion.div
+          layout="position"
+          className="summary"
+        >
           <div className="summary-content">
             <h3>Hey there 👋🏾😁,</h3>
             <h1 data-tool-tip="That's my name lol">I'm Antony Rapando</h1>
@@ -173,13 +177,26 @@ const Home = () => {
           <a className="test project1" href="#" title="My portfolio webpage">
             PORTFOLIO
           </a>
-          <a className="test project2" href="" title="Coming soon 😉">
-            Raps Shopping Incoming
+          <a
+            className="test project2"
+            href="https://dragndrop-ace1012.netlify.app/"
+            title="Create tier-lists or categorize anything!
+            You can also download and load/share the list presets."
+          >
+            Drag'n'Drop
           </a>
-          <a className="test project3" href="" title="Coming soon 😉">
-            Project 3
+          <a
+            className="test project3"
+            href="https://sssg-rapando.onrender.com"
+            title="Generate html pages from markdown files!
+            Go ahead and give it a try."
+          >
+            Simple Static Site Generator
           </a>
         </div>
+        <footer id="footer">
+          <span>Antony Rapando - @ {year}</span>
+        </footer>
       </section>
     </motion.div>
   );
