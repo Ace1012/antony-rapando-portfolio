@@ -68,10 +68,7 @@ const Home = () => {
       </AnimatePresence>
       <motion.section ref={sectionOne} id="section-one #" className="one">
         <Particles />
-        <motion.div
-          layout="position"
-          className="summary"
-        >
+        <motion.div layout="position" className="summary">
           <div className="summary-content">
             <h3>Hey there 👋🏾😁,</h3>
             <h1 data-tool-tip="That's my name lol">I'm Antony Rapando</h1>
@@ -174,11 +171,17 @@ const Home = () => {
           <h1>Projects</h1>
         </header>
         <div className="projects-container">
-          <a className="test project1" href="#" title="My portfolio webpage">
+          <a
+            className="test project1"
+            href="#"
+            target="_blank"
+            title="My portfolio webpage"
+          >
             PORTFOLIO
           </a>
           <a
             className="test project2"
+            target="_blank"
             href="https://dragndrop-ace1012.netlify.app/"
             title="Create tier-lists or categorize anything!
             You can also download and load/share the list presets."
@@ -187,6 +190,7 @@ const Home = () => {
           </a>
           <a
             className="test project3"
+            target="_blank"
             href="https://sssg-rapando.onrender.com"
             title="Generate html pages from markdown files!
             Go ahead and give it a try."
