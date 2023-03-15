@@ -17,9 +17,7 @@ function App() {
   return (
     <div className="App">
       <ModalContext.Provider value={{ isOpen, setIsOpen }}>
-        <header>
-          <NavBar extraMenu={extraMenu} setExtraMenu={setExtraMenu} />
-        </header>
+        <NavBar extraMenu={extraMenu} setExtraMenu={setExtraMenu} />
         <AnimatePresence>
           <Home key={"home"} />
         </AnimatePresence>

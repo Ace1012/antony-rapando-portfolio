@@ -11,6 +11,8 @@ export default{
         CSSLogo: './assets/css.svg',
         JSLogo: './assets/javascript.svg',
         TSLogo: './assets/typescript.svg',
-        SpringbootLogo: './assets/springboot.svg'
+        SpringbootLogo: './assets/springboot.svg',
+        ExpressJS: `./assets/expressjs.svg`,
+        LinkedIn: "./assets/linkedin.svg"
     }
 }

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import assets from "./assets";
 
 const extraMenuVariants = {
   hidden: {
@@ -37,7 +38,25 @@ const ExtraMenu = (props: any) => {
       onMouseLeave={toggleExtraMenu}
       className="navbar-extra-menu"
     >
-      <span>Nothing to see here lol</span>
+      {/* <span>Nothing to see here lol</span> */}
+      <div className="social-links">
+        <a href="https://www.linkedin.com/in/antony-rapando/" target={"_blank"}>
+          <img
+            className="social-link"
+            src={assets.svgs.LinkedIn}
+            alt="LinkedIn profile link"
+            title="LinkedIn profile link"
+          />
+        </a>
+        <a href="https://github.com/Ace1012" target={"_blank"}>
+          <img
+            className="social-link"
+            src={assets.svgs.GitHubLogo}
+            alt="Github profile link"
+            title="Github profile link"
+          />
+        </a>
+      </div>
     </motion.div>
   );
 };

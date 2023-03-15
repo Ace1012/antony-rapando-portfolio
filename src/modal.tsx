@@ -1,8 +1,14 @@
-const Modal = (props: any) => {
-  const { isOpen, setIsOpen } = props;
+interface IModalProps {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
+const Modal = ({ isOpen, setIsOpen }: IModalProps) => {
   return (
-    <div className="contact-overlay" onClick={() => setIsOpen(false)}>
+    <div
+      className={`contact-overlay ${isOpen ? "open" : ""}`}
+      onClick={() => setIsOpen(false)}
+    >
       {isOpen && (
         <form
           className="contact-form"
@@ -10,10 +16,12 @@ const Modal = (props: any) => {
           method="POST"
           onClick={(e) => e.stopPropagation()}
         >
-          <span id="close-contact-form" onClick={() => setIsOpen(false)}>
-            &times;
-          </span>
-          <h1>👋🏾 Contact Me</h1>
+          <header>
+            <h1>👋🏾 Contact Me</h1>
+            <span id="close-contact-form" onClick={() => setIsOpen(false)}>
+              &times;
+            </span>
+          </header>
           <div className="form-content">
             <div className="form-summary">
               <article>

@@ -74,7 +74,7 @@ const NavBar = (props: any) => {
       animate="visible"
     >
       <motion.svg
-        className="svg"
+        className="home-logo"
         variants={svgVariants}
         initial="hidden"
         animate="visible"
@@ -177,31 +177,33 @@ const NavBar = (props: any) => {
         />
       </motion.svg>
 
-      {/* <span>Can you see me?</span> */}
+      {/* <span style={{
+        color:"#212121"
+      }}>Can you see me?</span> */}
 
       <ul className="links">
         <li>
-          <span>
-            <a href="#section-two">
-              <span className="nav-option">Skills</span>
-            </a>
-          </span>
+          <a href="#section-two" className="nav-option">
+            Skills
+          </a>
         </li>
         <li>
-          <span>
-            <a  href="#section-three">
-              <span className="nav-option">Projects</span>
-            </a>
-          </span>
+          <a href="#section-three" className="nav-option">
+            Projects
+          </a>
         </li>
-        <li >
-          <span className="nav-option" onClick={() => changeContext()}>Contact Me</span>
+        <li>
+          <span className="nav-option" onClick={() => changeContext()}>
+            Contact Me
+          </span>
         </li>
         <li
           onMouseEnter={() => setExtraMenu(true)}
           onMouseLeave={() => setExtraMenu(false)}
         >
-          <span id="socials" className="nav-option">Socials</span>
+          <span id="socials" className="nav-option">
+            Socials
+          </span>
         </li>
       </ul>
       <AnimatePresence>

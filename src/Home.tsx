@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Modal from "./modal";
 import { ModalContext } from "./App";
 import { useContext, useEffect, useRef } from "react";
@@ -63,19 +63,17 @@ const Home = () => {
       initial="hidden"
       animate="visible"
     >
-      <AnimatePresence>
         {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
-      </AnimatePresence>
       <motion.section ref={sectionOne} id="section-one #" className="one">
         <Particles />
         <motion.div layout="position" className="summary">
           <div className="summary-content">
-            <h3>Hey there 👋🏾😁,</h3>
-            <h1 data-tool-tip="That's my name lol">I'm Antony Rapando</h1>
-            <h2 data-tool-tip="(┛ಠ_ಠ)┛彡┻━┻">A Junior Fullstack Engineer</h2>
-            <p>
-              I've recently graduated and made React.ts, Springboot and PostgreS
-              my stack of choice. Ready to tackle any project that comes my way
+            <span>Hey there 👋🏾😁,</span>
+            <span id="name" data-tool-tip="NOT pronounced Rapunzel">I'm Antony Rapando</span>
+            <span id="role" data-tool-tip="(┛ಠ_ಠ)┛彡┻━┻">Fullstack Software Engineer</span>
+            <p id="description">
+              I've recently graduated and made React.ts, Node, Express.ts/Springboot and PostgreSQL
+               (PERN as well as Springboot) my stack of choice. Ready to tackle any project that comes my way
               💪🏾😤
             </p>
           </div>
@@ -91,16 +89,16 @@ const Home = () => {
         </header>
         <ul className="skills-container">
           <li className="skill-item">
-            <h1>Basics</h1>
+            <span className="title">Basics</span>
             <div className="skill-logos">
               <img
-                id="skill"
+                className="skill"
                 title="HTML"
                 src={assets.svgs.HtmlLogo}
                 alt="HTML Logo"
               />
               <img
-                id="skill"
+                className="skill"
                 title="CSS"
                 src={assets.svgs.CSSLogo}
                 alt="CSS Logo"
@@ -108,22 +106,22 @@ const Home = () => {
             </div>
           </li>
           <li className="skill-item">
-            <h1>Front-End</h1>
+            <span className="title">Front-End</span>
             <div className="skill-logos">
               <img
-                id="skill"
+                className="skill"
                 title="Javascript"
                 src={assets.svgs.JSLogo}
                 alt="Javascript Logo"
               />
               <img
-                id="skill"
+                className="skill"
                 title="Typescript"
                 src={assets.svgs.TSLogo}
                 alt="Typescript Logo"
               />
               <img
-                id="skill"
+                className="skill"
                 title="React"
                 src={assets.svgs.ReactLogo}
                 alt="React Logo"
@@ -131,16 +129,16 @@ const Home = () => {
             </div>
           </li>
           <li className="skill-item">
-            <h1>Version Control</h1>
+            <span className="title">Version Control</span>
             <div className="skill-logos">
               <img
-                id="skill"
+                className="skill"
                 title="Github"
                 src={assets.svgs.GitHubLogo}
                 alt="GitHub Logo"
               />
               <img
-                id="skill"
+                className="skill"
                 title="Git"
                 src={assets.svgs.GitLogo}
                 alt="Git Logo"
@@ -148,15 +146,18 @@ const Home = () => {
             </div>
           </li>
           <li className="skill-item">
-            <h1>Back-End</h1>
+            <span className="title">Back-End</span>
             <div
               className="skill-logos"
-              style={{
-                justifyContent: "flex-start",
-              }}
             >
               <img
-                id="spring"
+                className="backend-logo"
+                title="Expressjs"
+                src={assets.svgs.ExpressJS}
+                alt="ExpressJS Logo"
+              />
+              <img
+                className="backend-logo"
                 title="Springboot"
                 src={assets.svgs.SpringbootLogo}
                 alt="Springboot Logo"
@@ -172,15 +173,14 @@ const Home = () => {
         </header>
         <div className="projects-container">
           <a
-            className="test project1"
+            className="project project1"
             href="#"
-            target="_blank"
             title="My portfolio webpage"
           >
             PORTFOLIO
           </a>
           <a
-            className="test project2"
+            className="project project2"
             target="_blank"
             href="https://dragndrop-ace1012.netlify.app/"
             title="Create tier-lists or categorize anything!
@@ -189,7 +189,7 @@ const Home = () => {
             Drag'n'Drop
           </a>
           <a
-            className="test project3"
+            className="project project3"
             target="_blank"
             href="https://sssg-rapando.onrender.com"
             title="Generate html pages from markdown files!
@@ -198,10 +198,10 @@ const Home = () => {
             Simple Static Site Generator
           </a>
         </div>
-        <footer id="footer">
-          <span>Antony Rapando - @ {year}</span>
-        </footer>
       </section>
+      <footer>
+        <span>Antony Rapando - @ {year}</span>
+      </footer>
     </motion.div>
   );
 };
