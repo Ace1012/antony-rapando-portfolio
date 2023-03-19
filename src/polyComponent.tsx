@@ -5,9 +5,13 @@ interface PolyOwnProps<E extends React.ElementType> {
   as?: E;
 }
 
-type PolyProps<E extends React.ElementType> = PolyOwnProps<E> & Omit<React.ComponentProps<E>, keyof PolyOwnProps<E>>;
+type PolyProps<E extends React.ElementType> = PolyOwnProps<E> &
+  Omit<React.ComponentProps<E>, keyof PolyOwnProps<E>>;
 
-const PolyComponent = <E extends React.ElementType = "div">({ children, as }: PolyProps<E>) => {
+const PolyComponent = <E extends React.ElementType = "div">({
+  children,
+  as,
+}: PolyProps<E>) => {
   const Component = as || "div";
   return <Component className="poly">{children}</Component>;
 };

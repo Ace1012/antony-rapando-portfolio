@@ -73,7 +73,7 @@ const Home = () => {
             <span id="role" data-tool-tip="(┛ಠ_ಠ)┛彡┻━┻">Fullstack Software Engineer</span>
             <p id="description">
               I've recently graduated and made React.ts, Node, Express.ts/Springboot and PostgreSQL
-               (PERN as well as Springboot) my stack of choice. Ready to tackle any project that comes my way
+               my stack of choice. Ready to tackle any project that comes my way
               💪🏾😤
             </p>
           </div>
