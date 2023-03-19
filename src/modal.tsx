@@ -4,6 +4,8 @@ interface IModalProps {
 }
 
 const Modal = ({ isOpen, setIsOpen }: IModalProps) => {
+  
+
   return (
     <div
       className={`contact-overlay ${isOpen ? "open" : ""}`}
@@ -30,6 +32,7 @@ const Modal = ({ isOpen, setIsOpen }: IModalProps) => {
               </article>
             </div>
             <div className="form-input-fields">
+            <input type="hidden" name="_next" value="https://ace1012.github.io/antony-rapando-portfolio/" />
               <label data-section="Name:">
                 Name:
                 <input type="text" name="name" required />
