@@ -172,13 +172,13 @@ const Home = () => {
           <h1>Projects</h1>
         </header>
         <div className="projects-container">
-          <a
+          {/* <a
             className="project project1"
             href="#"
             title="My portfolio webpage"
           >
             PORTFOLIO
-          </a>
+          </a> */}
           <a
             className="project project2"
             target="_blank"
