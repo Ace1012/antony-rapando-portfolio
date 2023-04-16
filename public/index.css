@@ -172,13 +172,14 @@ body:has(.contact-overlay.open) {
 #socials {
   cursor: pointer;
   padding: 5px;
-  color: black;
+  /* color: black; */
+  color: #f87f5c;
   font-size: 1rem;
   font-weight: bold;
-  background-color: rgb(248, 127, 92, 1);
+  /* background-color: rgb(248, 127, 92, 1); */
   padding: 5px;
   font-size: 1.2rem;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 6px;
   translate: none;
   transition: translate ease-in-out 100ms;
@@ -364,7 +365,7 @@ button:active {
 
 .summary {
   width: 80%;
-  /* height: 50vh; */
+  height: 50vh;
   /* height: 10rem; */
   background-color: #212121;
   padding: 1em 2em;
@@ -453,6 +454,17 @@ button:active {
   100% {
     text-shadow: none;
   }
+}
+
+#randomSvg {
+  position: absolute;
+  top: 15rem;
+  right: 5rem;
+  /* background-color: grey; */
+  height: 500px;
+  width: 300px;
+  z-index: 10000;
+  /* filter: url(#randomSvg-noise); */
 }
 
 .summary-content #role::after {
@@ -762,7 +774,7 @@ section {
 
   .profile-picture {
     width: 80%;
-    height: 50%;
+    height: 60%;
     order: 1;
     margin: auto;
     /* box-shadow: none; */
@@ -811,6 +823,10 @@ section {
     width: 60%;
   }
 
+  .summary {
+    height: fit-content;
+  }
+
   .summary-content #name::after {
     width: fit-content;
   }
@@ -824,7 +840,7 @@ section {
   .summary-content #role:active::after,
   .summary-content #role:hover::after {
     top: -200%;
-    left: 58%
+    left: 58%;
   }
 
   li span {

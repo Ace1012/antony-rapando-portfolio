@@ -1,8 +1,7 @@
 import React, { useCallback, useState } from "react";
-import "./App.css";
 import { AnimatePresence } from "framer-motion";
-import Home from "./Home";
-import NavBar from "./navbar";
+import Home from "./components/home";
+import NavBar from "./components/navbar";
 
 export const ModalContext = React.createContext<any>([]);
 

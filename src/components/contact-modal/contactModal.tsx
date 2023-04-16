@@ -3,7 +3,7 @@ interface IModalProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Modal = ({ isOpen, setIsOpen }: IModalProps) => {
+const ContactModal = ({ isOpen, setIsOpen }: IModalProps) => {
   
 
   return (
@@ -56,4 +56,4 @@ const Modal = ({ isOpen, setIsOpen }: IModalProps) => {
   );
 };
 
-export default Modal;
+export default ContactModal;

@@ -11,8 +11,8 @@ const ParticlesComponent = () => {
     },[]);
 
     const particlesInit = useCallback(async (engine:Engine) => {
-        await loadSlim(engine);
-        // await loadFull(engine);
+        // await loadSlim(engine);
+        await loadFull(engine);
     },[])
 
   return <Particles init={particlesInit} options={options}/>;

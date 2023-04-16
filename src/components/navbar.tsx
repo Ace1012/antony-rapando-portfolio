@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useContext, useState } from "react";
-import { ModalContext } from "./App";
-import ExtraMenu from "./extraMenu";
+import { ModalContext } from "../App";
+import ExtraMenu from "./contact-modal/extraMenu";
 
 const navbarVariants = {
   hidden: {
@@ -59,7 +59,6 @@ const NavBar = (props: any) => {
 
   const changeContext = () => {
     setIsOpen(true);
-    console.log("Opening Contact Form!");
   };
 
   const toggleExtraMenu = useCallback(() => {

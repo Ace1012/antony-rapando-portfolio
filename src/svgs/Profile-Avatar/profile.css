@@ -1,0 +1,92 @@
+.profile-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  aspect-ratio: 1;
+}
+.profile-avatar-svg {
+  --avatar-energy-color: rgb(54, 131, 131);
+  --avatar-energy-color: #f87f5c;
+  --avatar-energy-color: white;
+  --avatar-energy-color: rosybrown;
+  --avatar-energy-color: transparent;
+  /* --avatar-energy-color: #212121; */
+
+  /* --avatar-circle-color: white; */
+  --avatar-circle-color: #f87f5c;
+
+  height: 100%;
+  width: 100%;
+  background-color: var(--avatar-energy-color);
+}
+.avatar-path {
+  --primary-color: black;
+  fill: #f87f5c;
+  fill: #8e5d4e;
+  /* fill: lightgrey; */
+  /* fill: white; */
+  /* fill: #212121; */
+  /* fill: transparent; */
+  /* fill: teal; */
+  /* stroke: teal; */
+  /* stroke: white; */
+  stroke: #212121;
+  stroke: black;
+  /* stroke: #ffffff; */
+  /* stroke: #f87f5c; */
+  stroke-width: 0.5px;
+}
+
+.profile-avatar-svg > g > .thought-bubble {
+  height: 25px;
+  aspect-ratio: 1;
+}
+.profile-avatar-svg > g > .thought-bubble:nth-child(1) {
+  animation: bubble 4s ease-in-out infinite;
+}
+.profile-avatar-svg > g > .thought-bubble:nth-child(2) {
+  animation: bubble 4.5s ease-in-out infinite;
+}
+.profile-avatar-svg > g > .thought-bubble:nth-child(3) {
+  animation: bubble 5s ease-in-out infinite;
+}
+.profile-avatar-svg > g > .thought-bubble:nth-child(4) {
+  animation: bubble 5.5s ease-in-out infinite;
+}
+.profile-avatar-svg > g > .thought-bubble:nth-child(5) {
+  animation: bubble 6s ease-in-out infinite;
+}
+.profile-avatar-svg > g > .thought-bubble:nth-child(6) {
+  animation: bubble 6.5s ease-in-out infinite;
+}
+.profile-avatar-svg > g > .thought-bubble:nth-child(7) {
+  animation: bubble 7s ease-in-out infinite;
+}
+
+#overlaySvg{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 10000;
+}
+
+@keyframes bubble {
+  0% {
+    translate: 0 0;
+    opacity: 0;
+    filter: saturate(30%);
+  }
+  20% {
+    filter: saturate(100%);
+  }
+  69% {
+    opacity: 1;
+  }
+  100% {
+    translate: 0 -10rem;
+    filter: saturate(30%);
+  }
+}
