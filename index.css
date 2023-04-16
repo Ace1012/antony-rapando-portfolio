@@ -95,7 +95,6 @@ body:has(.contact-overlay.open) {
 .home-logo {
   margin: auto 0;
   height: 100%;
-  width: fit-content;
   /* background-color: rgba(128, 128, 128, 0.226); */
   border-radius: 10px;
 }
