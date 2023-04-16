@@ -3,7 +3,7 @@ import assets from "../assets/assets";
 
 interface ISkillsProps {}
 
-const Skills: React.FunctionComponent<ISkillsProps> = (props) => {
+const Skills = ({}: ISkillsProps) => {
   return (
     <section id="section-two" className="two">
       <header>

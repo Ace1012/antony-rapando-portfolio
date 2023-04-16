@@ -4,7 +4,7 @@ import Particles from "./particles/particles";
 
 interface ISectionOneProps {}
 
-const Hero: React.FunctionComponent<ISectionOneProps> = (props) => {
+const Hero = ({}: ISectionOneProps) => {
   const sectionOne = useRef<HTMLElement>(null);
 
   useEffect(() => {

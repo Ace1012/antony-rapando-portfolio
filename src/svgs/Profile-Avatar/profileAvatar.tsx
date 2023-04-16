@@ -7,13 +7,11 @@ interface IProfileProps {}
 const ProfileAvatar = ({}: IProfileProps) => {
   return (
     <div className="profile-container">
-      {/* <svg id="overlaySvg" /> */}
       <svg
         id="profile"
         className="profile-avatar-svg"
         viewBox="0.95903019 38.584512 208.96223 205"
         style={{
-          // filter: "url(#overlaySvg-noise)",
           filter: "url(#profile-noise)",
         }}
       >
@@ -21,7 +19,6 @@ const ProfileAvatar = ({}: IProfileProps) => {
           id="avatar-content"
           className="avatar-content"
           style={{
-            // filter: "url(#overlaySvg-noise)",
             filter: "url(#profile-noise)",
           }}
         >

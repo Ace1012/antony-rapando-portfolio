@@ -34,6 +34,8 @@ const Home = () => {
       animate="visible"
     >
       {isOpen && <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />}
+
+      {/* Invisible SVG used to house custom filter */}
       <MatrixFilter elementId="profile" duration={2000} />
 
       <Hero />

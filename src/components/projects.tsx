@@ -1,8 +1,6 @@
-import * as React from "react";
-
 interface IProjectsProps {}
 
-const Projects: React.FunctionComponent<IProjectsProps> = (props) => {
+const Projects = ({}: IProjectsProps) => {
   return (
     <section id="section-three" className="three">
       <header>
