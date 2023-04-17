@@ -112,14 +112,15 @@ const particlesConfig = {
   fire: {
     particles: {
       number: {
-        value: 100,
+        value: 50,
         density: {
           enable: true,
           value_area: 800,
         },
       },
       color: {
-        value: "#ca6347",
+        // value: "#ca6347",
+        value: "#9e4f39",
       },
       shape: {
         type: "circle",

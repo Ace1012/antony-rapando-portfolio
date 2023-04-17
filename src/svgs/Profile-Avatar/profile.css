@@ -7,14 +7,7 @@
   aspect-ratio: 1;
 }
 .profile-avatar-svg {
-  --avatar-energy-color: rgb(54, 131, 131);
-  --avatar-energy-color: #f87f5c;
-  --avatar-energy-color: white;
-  --avatar-energy-color: rosybrown;
   --avatar-energy-color: transparent;
-  /* --avatar-energy-color: #212121; */
-
-  /* --avatar-circle-color: white; */
   --avatar-circle-color: #f87f5c;
 
   height: 100%;
@@ -25,17 +18,8 @@
   --primary-color: black;
   fill: #f87f5c;
   fill: #8e5d4e;
-  /* fill: lightgrey; */
-  /* fill: white; */
-  /* fill: #212121; */
-  /* fill: transparent; */
-  /* fill: teal; */
-  /* stroke: teal; */
-  /* stroke: white; */
   stroke: #212121;
   stroke: black;
-  /* stroke: #ffffff; */
-  /* stroke: #f87f5c; */
   stroke-width: 0.5px;
 }
 

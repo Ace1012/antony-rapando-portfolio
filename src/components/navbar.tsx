@@ -47,28 +47,28 @@ const NavBar = (props: any) => {
 
       <ul className="links">
         <li>
-          <a href="#section-two" className="nav-option">
+          <a href="#skills-section" className="nav-option">
             Skills
           </a>
         </li>
         <li>
-          <a href="#section-three" className="nav-option">
+          <a href="#projects-section" className="nav-option">
             Projects
           </a>
         </li>
         <li>
           <span className="nav-option" onClick={() => changeContext()}>
-            Contact Me
+            Contact
           </span>
         </li>
-        <li
+        {/* <li
           onMouseEnter={() => setExtraMenu(true)}
           onMouseLeave={() => setExtraMenu(false)}
         >
           <span id="socials" className="nav-option">
             Socials
           </span>
-        </li>
+        </li> */}
       </ul>
       <AnimatePresence>
         {extraMenu && <ExtraMenu toggleExtraMenu={toggleExtraMenu} />}

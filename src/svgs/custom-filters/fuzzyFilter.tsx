@@ -1,9 +1,9 @@
-interface IMatrixFilterProps {
+interface IFuzzyFilterProps {
   elementId: string;
   duration?: number;
 }
 
-const MatrixFilter = ({ elementId, duration }: IMatrixFilterProps) => {
+const FuzzyFilter = ({ elementId, duration }: IFuzzyFilterProps) => {
   return (
     <svg
       style={{
@@ -23,26 +23,33 @@ const MatrixFilter = ({ elementId, duration }: IMatrixFilterProps) => {
           >
             <animate
               attributeName="baseFrequency"
-              values="1,0.1;1,0"
+              values="1,1;1,0.1"
               dur={duration ? `${duration}ms` : "6000ms"}
-              repeatCount="1"
+              repeatCount="indefinite"
               begin={`${elementId}.mouseenter`}
             />
             <animate
-              attributeName="baseFrequency"
-              values="1,1;1,0.1"
+              attributeName="seed"
+              values="0;100"
               dur={duration ? `${duration}ms` : "6000ms"}
-              repeatCount="1"
+              repeatCount="indefinite"
               begin={`${elementId}.mouseenter`}
             />
           </feTurbulence>
-          <feDisplacementMap in="SourceGraphic" in2="static2" scale="0">
+          <feDisplacementMap in="SourceGraphic" in2="static" scale="0">
             <animate
               attributeName="scale"
-              values="0;40;0"
+              values="5"
               dur={duration ? `${duration}ms` : "6000ms"}
-              repeatCount="1"
+              repeatCount="indefinite"
               begin={`${elementId}.mouseenter`}
+            />
+            <animate
+              attributeName="scale"
+              values="0"
+              dur={duration ? `${duration}ms` : "6000ms"}
+              repeatCount="indefinite"
+              begin={`${elementId}.mouseleave`}
             />
           </feDisplacementMap>
         </filter>
@@ -51,4 +58,4 @@ const MatrixFilter = ({ elementId, duration }: IMatrixFilterProps) => {
   );
 };
 
-export default MatrixFilter;
+export default FuzzyFilter;

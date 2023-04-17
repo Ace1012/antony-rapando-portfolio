@@ -1,26 +1,31 @@
+import { useRef } from "react";
 import assets from "../assets/assets";
 
-interface ISkillProps {}
+interface ISkillProps {
+  className?: string;
+  name: string;
+  src: string;
+  alt: string;
+}
 
-const Skill: React.FunctionComponent<ISkillProps> = (props) => {
+const Skill = ({ className, name, src, alt }: ISkillProps) => {
+  const skillContainerRef = useRef<HTMLDivElement>(null);
   return (
-    <li className="skill-item">
-      <span className="title">Version Control</span>
-      <div className="skill-logos">
-        <img
-          className="skill"
-          title="Github"
-          src={assets.svgs.GitHubLogo}
-          alt="GitHub Logo"
-        />
-        <img
-          className="skill"
-          title="Git"
-          src={assets.svgs.GitLogo}
-          alt="Git Logo"
-        />
-      </div>
-    </li>
+    <div ref={skillContainerRef} className="skill-container">
+      <span
+        style={{
+          // textTransform: "uppercase",
+          fontSize: "1.25rem",
+        }}
+      >
+        {name}
+      </span>
+      <img
+        className={`skill ${className ?? ""}`}
+        title="HTML"
+        {...{ src, alt }}
+      />
+    </div>
   );
 };
 

@@ -5,8 +5,9 @@ import { useContext } from "react";
 import Particles from "./particles/particles";
 import MatrixFilter from "../svgs/custom-filters/matrixFilter";
 import Hero from "./hero";
-import Skills from "./skills";
 import Projects from "./projects";
+import Skills from "./skills";
+import SocialsKebab from "./socials-kebab";
 
 const homeVariants = {
   hidden: {
@@ -34,18 +35,20 @@ const Home = () => {
       animate="visible"
     >
       {isOpen && <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />}
-
-      {/* Invisible SVG used to house custom filter */}
-      <MatrixFilter elementId="profile" duration={2000} />
-
+      {/* Invisible SVG used to house custom profile avatar filter */}
+      <MatrixFilter elementId="profile" duration={1000} />
       <Hero />
-
       <Skills />
-
       <Projects />
-
+      <SocialsKebab />
       <footer>
-        <span>Antony Rapando - @ {year}</span>
+        <span
+          style={{
+            color: "white",
+          }}
+        >
+          Antony Rapando - @ {year}
+        </span>
       </footer>
     </motion.div>
   );

@@ -43,7 +43,7 @@ const ExtraMenu = (props: any) => {
         <a href="https://www.linkedin.com/in/antony-rapando/" target={"_blank"}>
           <img
             className="social-link"
-            src={assets.svgs.LinkedIn}
+            src={assets.svgs.LinkedInLogo}
             alt="LinkedIn profile link"
             title="LinkedIn profile link"
           />
