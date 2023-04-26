@@ -2,14 +2,16 @@ import "./profile.css";
 import assets from "../../assets/assets";
 import ThoughtBubble from "./thoughtBubble";
 
-interface IProfileProps {}
+interface IProfileProps { }
 
-const ProfileAvatar = ({}: IProfileProps) => {
+const ProfileAvatar = ({ }: IProfileProps) => {
   return (
     <div className="profile-container">
       <svg
         id="profile"
         className="profile-avatar-svg"
+        height={"100%"}
+        width={"100%"}
         viewBox="0.95903019 38.584512 208.96223 205"
         style={{
           filter: "url(#profile-noise)",
