@@ -3,11 +3,12 @@ import { AnimatePresence } from "framer-motion";
 import Home from "./components/home";
 import NavBar from "./components/navbar";
 
-export const ModalContext = React.createContext<any>([]);
+interface IModalContext {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+}
 
-const year = new Date().getFullYear();
-// const footer = document.getElementById("footer") as HTMLElement;
-// footer.innerText = "Antony Rapando - © " + year;
+export const ModalContext = React.createContext<IModalContext>({} as IModalContext);
 
 function App() {
   const [extraMenu, setExtraMenu] = useState(false);

@@ -26,12 +26,6 @@ const SkillCard = ({ category, children, style }: ISkillCardProps) => {
           color: "#f87f5c"
         }}>{category}</span>
       </header>
-      {/* <p className="category-summary">{summary}</p> */}
-      {/* <p className="category-summary">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio ad odio
-        facilis at harum? Odio aliquam voluptatum unde voluptatibus pariatur,
-        sint, architecto tenetur vero a eos quidem est eligendi non.
-      </p> */}
       {children}
     </li>
   );

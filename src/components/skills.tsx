@@ -6,9 +6,9 @@ import MatrixFilter from "../svgs/custom-filters/matrixFilter";
 import FuzzyFilter from "../svgs/custom-filters/fuzzyFilter";
 import { useEffect, useRef, useState } from "react";
 
-interface INewSkillsProps {}
+interface INewSkillsProps { }
 
-const Skills = ({}: INewSkillsProps) => {
+const Skills = ({ }: INewSkillsProps) => {
   return (
     <section id="skills-section" className="two">
       <header>
